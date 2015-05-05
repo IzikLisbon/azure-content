@@ -65,9 +65,9 @@ If it's a Windows Universal app, repeat the steps for both the Windows Phone pro
     ![](./media/app-insights-windows-get-started/04-ai-nuget.png)
 
 3. Pick the latest version of the appropriate package - one of:
-   * Application Insights for Windows applications - *for Windows Store apps*
-   * Application Insights for Windows Phone applications
-   * Application Insights for Web Apps - *use this for a desktop application* 
+   * Application Insights for Windows Applications - *for Windows Store and phone apps*
+   * Application Insights for Web Apps 
+   * Application Insights API - *for Windows desktop apps*
 4. Edit ApplicationInsights.config (which has been added by the NuGet install). Insert this just before the closing tag:
 
     `<InstrumentationKey>`*the key you copied*`</InstrumentationKey>`
