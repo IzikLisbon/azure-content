@@ -110,6 +110,12 @@ If it's a Windows Universal app, repeat the steps below for both the Windows Pho
 
 **Windows Universal apps**: Repeat the steps for both the Phone and the Store project. [Example of a Windows 8.1 Universal app](https://github.com/Microsoft/ApplicationInsights-Home/tree/master/Samples/Windows%208.1%20Universal).
 
+**Important Notes**: 
+
+1. If instrumentation key is passed to InitializeAsync it will be ignored when the app is in the store. Always use ApplicationInsights.config to set the instrumentation key.
+
+2. TelemetryClients must be created after InitializeAsync is completed, otherwise sessions and users will not be tracked.  
+
 ### <a name="network"></a>3. Enable network access for your app
 
 If your app doesn't already [request outgoing network access](https://msdn.microsoft.com/library/windows/apps/hh452752.aspx), you'll have to add that to its manifest as a [required capability](https://msdn.microsoft.com/library/windows/apps/br211477.aspx).
